@@ -1,29 +1,45 @@
-# README #
+# AppArte
 
-This README would normally document whatever steps are necessary to get your application up and running.
+_Aplicación web destinada al registro de eventos_
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### Instalación 🔧
 
-### How do I get set up? ###
+_Ejecutar_
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+```
+Composer installl
+```
 
-### Contribution guidelines ###
+_Generar la clave del proyecto_
 
-* Writing tests
-* Code review
-* Other guidelines
+```
+php artisan key:generate
+```
 
-### Who do I talk to? ###
+_Configurar en archivo .env_
 
-* Repo owner or admin
-* Other community or team contact
+_Ejecutar las migraciones_
+
+```
+php artisan migrate
+```
+
+_Arrancar el servidor_
+
+```
+php artisan serve
+```
+
+## Accediendo a la app⚙️
+
+_Teclear_
+
+```
+http://127.0.0.1:8000/login
+```
+```
+email y contraseña de acceso: admin@test123
+```
+
+---
