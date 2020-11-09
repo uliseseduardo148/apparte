@@ -9,7 +9,7 @@
         </div>
         <div class="col-8">
             <div class="panel-body">
-                {!! Form::open(['action' => ['EventController@store'],'method' => 'POST', 'enctype'=> 'multipart/form-data']) !!}
+                {!! Form::open(['action' => ['EventController@store'],'method' => 'POST', 'enctype'=> 'multipart/form-data', 'id' => 'form']) !!}
 
                 <div class="form-group">
                     {{Form::label('title', 'Título')}}
@@ -39,8 +39,16 @@
                     {{Form::label('status', 'Publicar')}}
                     {{ Form::checkbox('status',null,true)}}
                 </div>
-                {{Form::submit('Guardar', ['class' => 'btn btn-primary'])}}
+
+                <div class="pull-right">
+                    <a href="/events" type="button" class="btn btn-light">Cancelar</a>
+                    <input type="button" class="btn btn-danger" id="btn-reset" value="Limpiar" />
+                    {{Form::submit('Guardar', ['class' => 'btn btn-primary'])}}
+                </div>
+
                 {!! Form::close() !!}
+
+
             </div>
         </div>
         <div class="col-sm"></div>
