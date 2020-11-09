@@ -6,6 +6,7 @@ use App\Events;
 use App\Http\Requests\EvenRequest;
 use App\Http\Requests\UpdateEventRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EventController extends Controller
 {
@@ -112,12 +113,13 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function disable(Request $request)
+    public function disable($id)
     {
-        $event = Events::find($request->id);
-        $event->status = $request->status;
+        $event = Events::find($id);
+        //si el status está en 1 lo cambiamos a 0 y viceversa
+        $event->status ? $event->status = 0 : $event->status = 1;
         $event->save();
-        return response()->json(['msg_success'=>'Deshabilitado correctamente.']);
+        return redirect('/events')->with('success_msg', 'Evento actualizado');
     }
 
 }

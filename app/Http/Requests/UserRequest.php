@@ -30,4 +30,25 @@ class UserRequest extends FormRequest
             'confirm_password' => 'required|same:password',
         ];
     }
+
+     /**
+     * Mensajes para las validaciones
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'El nombre de usuario es requerido.',
+            'name.max' => 'El nombre de usuario debe ser menor a :max caracteres.',
+            'email.required' => 'El correo electrónico es requerido.',
+            'email.email' => 'El correo electrónico debe ser válido.',
+            'email.max' => 'El correo electrónico debe ser menor a :max caracteres.',
+            'password.required' => 'Se requiere una contraseña.',
+            'password.min' => 'Se requiere una contraseña de al menos :min caracteres.',
+            'password.max' => 'La contraseña no puede ser mayor a :max caracteres.',
+            'confirm_password.required' => 'Confirme su contraseña.',
+            'confirm_password.same' => 'La confirmación de contraseña no coincide con la introducida anteriormente.',
+        ];
+    }
 }
