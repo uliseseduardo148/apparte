@@ -19,6 +19,7 @@
             <div style="margin-top: 30px;">
                 @include('partials.messages')
             </div>
+            <br><br>
             @yield('content')
         </main>
     </div>

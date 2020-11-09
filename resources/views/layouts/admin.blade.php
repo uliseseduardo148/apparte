@@ -17,6 +17,7 @@
         <main class="py-4">
             <div style="margin-top: 30px;">
             </div>
+            <br><br>
             @yield('content')
         </main>
     </div>

@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','FrontController@index');
+Route::get('/', 'FrontController@index');
+Route::get('/show/{event}', 'FrontController@show');
+Route::get('/showEvents', 'FrontController@showEvents');
 
 //Auth::routes();
 
@@ -24,5 +26,5 @@ Route::middleware(['auth'])->group(function () {
     // Rutas de eventos que necesitan autenticarse
     Route::resource('events', 'EventController');
     Route::resource('users', 'UserController');
-    Route::post('disable/{event}','EventController@disable');
+    Route::post('disable/{event}', 'EventController@disable');
 });
