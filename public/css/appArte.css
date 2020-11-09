@@ -1,0 +1,31 @@
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+.secondary {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 110px;
+    height: 100px;
+}
+.principal {
+    width: 730px;
+    height: 300px;
+}
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+.title {
+    text-align: right;
+}
+.description {
+    text-align: justify;
+}
+.image-list {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 200px;
+}
